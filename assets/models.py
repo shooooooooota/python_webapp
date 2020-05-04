@@ -1,6 +1,7 @@
 # coding: utf-8
 from sqlalchemy import Column, Integer, DateTime, Date
-from .database import Base
+#from .database import Baseを下のように変更した
+from assets.database import Base
 from datetime import datetime as dt
 
 # Table情報

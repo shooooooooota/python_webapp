@@ -14,8 +14,8 @@ databese_file = os.path.join(os.path.abspath(
 # どのデータベースを使っているのか
 '''engine = create_engine('sqlite:///' + databese_file,
                        convert_unicode=True, echo=True) '''
-#herokuにアップロードするので、このように変更
-engine = create_engine(os.environ.get('DATABSE_URL') or 'sqlite:///' + databese_file,
+# herokuにアップロードするので、このように変更
+engine = create_engine(os.environ.get('DATABASE_URL') or 'sqlite:///' + databese_file,
                        convert_unicode=True, echo=True)
 
 # 自動でコミット、自動で反映しますか？
